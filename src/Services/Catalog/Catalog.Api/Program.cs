@@ -36,4 +36,4 @@ app.UseHealthChecks("/health",
         ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
     });
 
-app.Run();
+await app.RunAsync();
