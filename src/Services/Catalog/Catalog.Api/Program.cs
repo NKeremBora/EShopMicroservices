@@ -1,5 +1,3 @@
-using BuildingBlocks.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 var assembly = typeof(Program).Assembly;

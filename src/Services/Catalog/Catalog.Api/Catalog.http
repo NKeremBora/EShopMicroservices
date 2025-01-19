@@ -1,3 +1,4 @@
 ### Health Check Request
-GET https://localhost:6060/health
+GET https://localhost:5050/products
 Content-Type: application/json
+Accept: application/json
