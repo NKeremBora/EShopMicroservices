@@ -2,7 +2,7 @@ namespace Catalog.Api.Products.DeleteProduct;
 
 public record DeleteProductResponse(bool IsSuccess);
 
-public class DeleteProductEndpoint : ICarterModule
+public class DeleteProductEndpoints : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
