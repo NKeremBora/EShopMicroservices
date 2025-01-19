@@ -5,6 +5,8 @@
 services:
   catalogdb:
     image: postgres
+  basketdb:
+    image: postgres
     
   catalog.api:
     image: catalog.api
@@ -14,3 +16,4 @@ services:
 
 volumes:
   postgres_catalog:
+  postgres_basket:
