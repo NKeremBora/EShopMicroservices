@@ -5,9 +5,13 @@
 services:
   catalogdb:
     image: postgres
+    
   basketdb:
     image: postgres
-    
+  
+  distributedcache:
+    image: redis
+
   catalog.api:
     image: catalog.api
     build:
