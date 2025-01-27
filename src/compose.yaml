@@ -1,7 +1,4 @@
-﻿version : '3.4'
-
-
-
+﻿
 services:
   catalogdb:
     image: postgres
@@ -18,13 +15,13 @@ services:
       context: .
       dockerfile: Services/Catalog/Catalog.Api/Dockerfile
   
-  Basket.api:
+  basket.api:
     image: basket.api
     build:
       context: .
       dockerfile: Services/Basket/Basket.Api/Dockerfile
       
-  Discount.Grpc:
+  discount.Grpc:
     image: ciscount.grpc
     build:
       context: .
