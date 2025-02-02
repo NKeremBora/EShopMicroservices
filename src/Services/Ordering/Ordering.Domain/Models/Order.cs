@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using Ordering.Domain.Abstractions;
 
 namespace Ordering.Domain.Models;
@@ -12,7 +13,11 @@ public class Order : Aggregate<OrderId>
     public Address BillingAddress { get; private set; } = default!;
     public Payment Payment { get; private set; } = default!;
     public OrderStatus Status { get; private set; } = OrderStatus.Pending;
-    public decimal TotalPrice => OrderItems.Sum(x => x.Price * x.Quantity);
+    public decimal TotalPrice
+    {
+        get => OrderItems.Sum(x => x.Price * x.Quantity);
+        private set {}
+    }
 
     public static Order Create(OrderId id, CustomerId customerId, OrderName orderName, Address shippingAddress, Address billingAddress, Payment payment)
     {
