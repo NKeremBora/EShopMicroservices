@@ -11,10 +11,10 @@
         <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="9.0.0" />
         <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="9.0.0" />
         <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
-        <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
-        <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" Version="2.67.0" />
-        <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
-        <PackageReference Include="Grpc.Tools" Version="2.69.0">
+        <PackageReference Include="Grpc.AspNetCore" Version="2.42.0" />
+        <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" Version="2.42.0" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.42.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.42.0">
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
           <PrivateAssets>all</PrivateAssets>
         </PackageReference>
