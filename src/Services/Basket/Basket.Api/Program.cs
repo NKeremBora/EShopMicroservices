@@ -32,6 +32,10 @@ builder.Services.AddStackExchangeRedisCache(options =>
     //options.InstanceName = "Basket";
 });
 
+var discountUrl = Environment.GetEnvironmentVariable("GrpcSettings_DiscountUrl") 
+                  ?? builder.Configuration["GrpcSettings:DiscountUrl"];
+
+Console.WriteLine($"Final GRPC URL: {discountUrl}");
 //Grpc Services
 builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
 {
