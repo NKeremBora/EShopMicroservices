@@ -143,3 +143,20 @@ services:
       - "6064:8081"
     volumes:
       - ${HOME}/.aspnet/https:/home/app/.aspnet/https:ro
+  
+  
+  shopping.web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ApiSettings__GatewayAddress=http://yarpapigateway:8080
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=MyApp123
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/home/app/.aspnet/https/aspnetapp.pfx
+    depends_on:
+      - yarpapigateway
+    ports:
+      - "6005:8080"
+      - "6065:8081"
+    volumes:
+      - ${HOME}/.aspnet/https:/home/app/.aspnet/https:ro
